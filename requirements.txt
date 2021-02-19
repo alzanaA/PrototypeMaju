@@ -10,6 +10,7 @@ click==7.1.1
 colorama==0.4.4
 cryptography==2.9
 cycler==0.10.0
+Cython==0.29.21
 distlib==0.3.1
 entrypoints==0.3
 filelock==3.0.12
@@ -35,7 +36,7 @@ mysqlclient==1.4.6
 numpy==1.15.2
 oauthlib==3.0.1
 packaging==20.7
-pandas==0.23.4
+pandas==0.25.1
 pluggy==0.13.1
 protobuf==3.14.0
 py==1.9.0
@@ -51,7 +52,9 @@ python-dateutil==2.7.3
 python-dotenv==0.12.0
 pytz==2018.5
 requests==2.23.0
+scikit_learn==0.23.1
 six==1.14.0
+tensorflow
 toml==0.10.2
 typed-ast==1.4.1
 urllib3==1.25.8
