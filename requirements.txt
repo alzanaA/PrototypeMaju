@@ -28,12 +28,11 @@ Jinja2==2.11.2
 kiwisolver==1.0.1
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
-matplotlib==3.0.1
 mccabe==0.6.1
 mysql==0.0.2
 mysql-connector-python==8.0.22
 mysqlclient==1.4.6
-numpy==1.20.1
+numpy==1.16.5
 oauthlib==3.0.1
 packaging==20.7
 pandas==0.25.1
@@ -54,7 +53,6 @@ pytz==2018.5
 requests==2.23.0
 scikit_learn==0.23.1
 six==1.14.0
-tensorflow
 toml==0.10.2
 typed-ast==1.4.1
 urllib3==1.25.8
