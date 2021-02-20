@@ -58,13 +58,12 @@ google = oauth.register(
 )
 
 mysql = MySQL(app)
-
 app.secret_key = 'secretkey'
-app.config['MYSQL_DATABASE_USER'] = 'merimbun'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'FBj@sLkSta$8UVG'
-app.config['MYSQL_DATABASE_DB'] = 'maju'
-app.config['MYSQL_DATABASE_PORT'] = 1433
-app.config['MYSQL_DATABASE_HOST'] = 'majuforsme.database.windows.net' 
+app.config['MYSQL_DATABASE_USER'] = 'bszYOhpcMW'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'jxdjBacLxY'
+app.config['MYSQL_DATABASE_DB'] = 'bszYOhpcMW'
+app.config['MYSQL_DATABASE_HOST'] = 'remotemysql.com'
+app.config['MYSQL_DATABASE_PORT'] = 3306
 
 mysql.init_app(app)
 
