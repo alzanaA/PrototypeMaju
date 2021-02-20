@@ -2,8 +2,8 @@ from flask import Flask, request, render_template, session, url_for, redirect, f
 from flask_mysqldb import MySQL
 import secrets
 
-import urllib.parse
-from flask_sqlalchemy import SQLAlchemy
+#import urllib.parse
+#from flask_sqlalchemy import SQLAlchemy
 
 from authlib.integrations.flask_client import OAuth
 import os
@@ -63,22 +63,20 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
-app.config['SECRET_KEY'] = 'supersecret'
-app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
-app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
+#app.config['SECRET_KEY'] = 'supersecret'
+#app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
+#app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 
 # extensions
-mysql = SQLAlchemy(app)
-#mysql = MySQL(app)
+#mysql = SQLAlchemy(app)
+mysql = MySQL(app)
 
-'''
 app.secret_key = 'secretkey'
 app.config['MYSQL_DATABASE_USER'] = 'merimbun'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'FBj@sLkSta$8UVG'
 app.config['MYSQL_DATABASE_DB'] = 'maju'
-app.config['MYSQL_DATABASE_PORT'] = 3307
+app.config['MYSQL_DATABASE_PORT'] = 1433
 app.config['MYSQL_DATABASE_HOST'] = 'majuforsme.database.windows.net' 
-'''
 
 mysql.init_app(app)
 
