@@ -2,9 +2,6 @@ from flask import Flask, request, render_template, session, url_for, redirect, f
 from flask_mysqldb import MySQL
 import secrets
 
-#import urllib.parse
-#from flask_sqlalchemy import SQLAlchemy
-
 from authlib.integrations.flask_client import OAuth
 import os
 from datetime import timedelta
@@ -21,9 +18,6 @@ import pickle
 
 import pandas as pd
 import numpy as np
-
-# Configure Database URI: 
-params = urllib.parse.quote_plus("DRIVER={SQL Server};SERVER=majuforsme.database.windows.net;DATABASE=maju;UID=merimbun;PWD=FBj@sLkSta$8UVG")
 
 # App config
 app = Flask(__name__)
@@ -63,12 +57,6 @@ google = oauth.register(
     client_kwargs={'scope': 'openid email profile'},
 )
 
-#app.config['SECRET_KEY'] = 'supersecret'
-#app.config['SQLALCHEMY_DATABASE_URI'] = "mssql+pyodbc:///?odbc_connect=%s" % params
-#app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
-
-# extensions
-#mysql = SQLAlchemy(app)
 mysql = MySQL(app)
 
 app.secret_key = 'secretkey'
